@@ -24,5 +24,10 @@ namespace Project_WPF
         {
             InitializeComponent();
         }
+
+        private void btnAfsluiten_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
