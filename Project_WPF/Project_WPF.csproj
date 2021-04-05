@@ -71,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Films.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,6 +82,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Films.xaml.cs">
+      <DependentUpon>Films.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -116,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="clapper-board-custom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project_Dal\Project_Dal.csproj">
+      <Project>{837a18d2-8139-4693-9a79-5a2a2df6398f}</Project>
+      <Name>Project_Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project_Models\Project_Models.csproj">
+      <Project>{b8379352-8ab0-459f-845f-6221790a370b}</Project>
+      <Name>Project_Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

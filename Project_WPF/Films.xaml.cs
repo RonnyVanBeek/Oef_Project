@@ -10,30 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project_Models;
+using Project_Dal;
 
 namespace Project_WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Films.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Films : Window
     {
-        public MainWindow()
+        public Films()
         {
             InitializeComponent();
         }
 
-        private void btnAfsluiten_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            dataFilms.ItemsSource = DatabaseOperations.OphalenFilms();
         }
 
-        private void btnFilm_Click(object sender, RoutedEventArgs e)
+        private void btnSluiten_Click(object sender, RoutedEventArgs e)
         {
-            Films films = new Films();
-            films.ShowDialog();
+            this.Close();
         }
     }
 }

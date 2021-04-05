@@ -56,6 +56,7 @@
     <Compile Include="Beroemdheid.cs">
       <DependentUpon>IMDbFilmsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseOperations.cs" />
     <Compile Include="Film.cs">
       <DependentUpon>IMDbFilmsModel.tt</DependentUpon>
     </Compile>
